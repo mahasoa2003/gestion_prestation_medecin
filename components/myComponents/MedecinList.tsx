@@ -99,7 +99,7 @@ export default function MedecinsList() {
       const data: Medecin[] = responseJson.data.medecins;
       setMedecins(data);
     } catch (err) {
-      setError("Impossible de charger les médecins.");
+      setError("Impossible de charger les médecins." + err);
     } finally {
       setLoading(false);
     }
